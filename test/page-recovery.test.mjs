@@ -32,7 +32,7 @@ function fixture(options={}){
  const context=vm.createContext({document,location:{hostname:'h.liepin.com'},HTMLInputElement:Input,Event:class{},
   chrome:{runtime:{onMessage:{addListener:fn=>listener=fn}}},
   getComputedStyle:()=>({visibility:'visible',display:'block'}),
-  TTCPageControls:{resolveControl:e=>e,click:async(el,before=()=>{},guard=async()=>{},validate=()=>{})=>{
+  RCPageControls:{resolveControl:e=>e,click:async(el,before=()=>{},guard=async()=>{},validate=()=>{})=>{
     await guard();options.beforeClick?.(mutate);validate();before();
     if(el===close){closeClicks++;if(!options.stuckDialog)dialogShown=false;return;}
     searchClicks++;

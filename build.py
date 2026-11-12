@@ -27,5 +27,5 @@ def build(target,root=ROOT):
   assert not any('bridge-config.json' in n or '.runtime' in n or 'history-verified' in n for n in archive.namelist())
  return {'archive':str(target),'files':len(entries)+2,'sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'profile':'public-source-allowlist'}
 if __name__=='__main__':
- p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',default=str(ROOT/'release'/('TTC-Recruiting-Copilot-'+json.loads((ROOT/'extension'/'manifest.json').read_text(encoding='utf-8'))['version']+'-source.zip')))
+ p=argparse.ArgumentParser(description=__doc__);p.add_argument('--output',default=str(ROOT/'release'/('Recruiting-Copilot-'+json.loads((ROOT/'extension'/'manifest.json').read_text(encoding='utf-8'))['version']+'-source.zip')))
  print(json.dumps(build(p.parse_args().output),ensure_ascii=False))

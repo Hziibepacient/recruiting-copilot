@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "TTC 猎聘助手",
+  "name": "猎聘招聘助手",
   "version": "0.3.1",
   "description": "本地读取猎聘页面、审核队列、核验默认招呼回执。",
   "permissions": [
@@ -16,7 +16,7 @@
     "type": "module"
   },
   "action": {
-    "default_title": "打开 TTC 猎聘助手"
+    "default_title": "打开 猎聘招聘助手"
   },
   "content_scripts": [
     {

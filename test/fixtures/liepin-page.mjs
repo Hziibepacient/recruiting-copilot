@@ -30,7 +30,7 @@ export function completedDialogFixture(options={}){
  const context=vm.createContext({document,location:{hostname:'h.liepin.com'},HTMLInputElement:Input,Event:class{},MouseEvent:class{},KeyboardEvent:class{constructor(type,args){Object.assign(this,args);}},Date:class extends Date{static now(){return now;}},URL,TextEncoder,setTimeout:fn=>{now+=150;queueMicrotask(fn);},
   innerWidth:1200,innerHeight:800,scrollX:0,scrollY:0,visualViewport:null,
   chrome:{storage:{local:{set:async()=>{},get:async()=>({stop:stopped})}},runtime:{onMessage:{addListener:fn=>listener=fn}}},
-  getComputedStyle:()=>({visibility:'visible',display:'block'}),TTCPageControls:{resolveControl:e=>e,click:async(el,before=()=>{},guard=async()=>{},validate=()=>{})=>{
+  getComputedStyle:()=>({visibility:'visible',display:'block'}),RCPageControls:{resolveControl:e=>e,click:async(el,before=()=>{},guard=async()=>{},validate=()=>{})=>{
    await guard();if(el===button&&options.beforeSend)await options.beforeSend({advance:ms=>now+=ms});validate();before();if(el===opener)dialogVisible=true;else if(el===choice)activeMessage=true;else if(el===button){sendClicks++;contacted=true;now+=options.advanceAfterClick||0;if(options.replaceRowAfterClick)currentRow=Object.create(row);}else if(el===close){closeClicks++;dialogVisible=false;}else if(el===searchButton)ids=['new-candidate'];
   }},
  });

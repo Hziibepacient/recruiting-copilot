@@ -39,7 +39,7 @@
   const click=(element,before=()=>{},guard=async()=>{},validate=()=>{})=>{
     const deadline=operationDeadline,assertActive=()=>ensureDeadline(deadline);
     assertActive();
-    return TTCPageControls.click(element,before,async()=>{assertActive();await guard();assertActive();},()=>{assertActive();validate();assertActive();},assertActive);
+    return RCPageControls.click(element,before,async()=>{assertActive();await guard();assertActive();},()=>{assertActive();validate();assertActive();},assertActive);
   };
   async function clickAfterLoading(el,validate){for(let i=0;i<3;i++){await wait(()=>![...document.querySelectorAll('.ant-spin-spinning')].some(visible),8000);try{return await click(el,()=>{},async()=>{},validate);}catch(e){if(!e.message.includes('ant-spin-spinning')||i===2)throw e;}}}
   const exact=(root,label)=>[...root.querySelectorAll('button,a,span,em')].filter(e=>visible(e)&&text(e)===label).sort((a,b)=>a.querySelectorAll('*').length-b.querySelectorAll('*').length)[0];
@@ -79,7 +79,7 @@
     const controls=[...d.querySelectorAll('button.ant-modal-close,.ant-modal-close,[aria-label="Close"],[aria-label="关闭"],.ant-notification-notice-close')].filter(visible);
     // The same close button can match several selectors; nested close icons are
     // resolved to their native control before the uniqueness check.
-    const unique=[...new Set(controls.map(e=>TTCPageControls.resolveControl?.(e)||e))];
+    const unique=[...new Set(controls.map(e=>RCPageControls.resolveControl?.(e)||e))];
     return unique.length===1?unique[0]:null;
   }
   function isCompletedDialog(d){
@@ -297,7 +297,7 @@
   }catch(e){if(!clicked)return {notSent:true,error:e.message};throw e;}}
   async function dispatch(m){
     if(m.type==='health')return {
-      protocol:6,clickVersion:TTCPageControls.version,
+      protocol:6,clickVersion:RCPageControls.version,
       viewport:{width:innerWidth,height:innerHeight,scrollX,scrollY,visualWidth:visualViewport?.width,visualHeight:visualViewport?.height,scale:visualViewport?.scale},
       visibility:document.visibilityState,focus:document.hasFocus(),
       pageBusy,pageOperation,capabilities:['inspect','detailLink','prepare','send','receipt','search'],

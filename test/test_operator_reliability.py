@@ -125,7 +125,7 @@ class ReliabilityTests(unittest.TestCase):
   with patch.multiple(bridge,ROOT=op.ROOT,RUNTIME=op.RUNTIME,PORT=0):
    server=bridge.make_server();bridge.PORT=server.server_address[1]
    thread=threading.Thread(target=server.serve_forever,daemon=True);thread.start()
-   config=bridge.init();headers={'Authorization':'Bearer '+config['token'],'X-TTC-Client':'direct-1'}
+   config=bridge.init();headers={'Authorization':'Bearer '+config['token'],'X-RC-Client':'direct-1'}
    try:
     request=op.read(armed['requestFile'])
     bridge.save(op.RUNTIME/(command+'.command.json'),{'id':command,'expiresAt':time.time()+45,'command':request})

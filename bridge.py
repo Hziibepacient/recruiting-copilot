@@ -45,11 +45,11 @@ def make_server(read_only=False):
             self.send_header('Content-Type','application/json');self.end_headers();self.wfile.write(json.dumps(data,ensure_ascii=False).encode())
         def do_OPTIONS(self):
             if not self.headers.get('Origin','').startswith('chrome-extension://'):return self.response(403,{})
-            self.send_response(204);self.send_header('Access-Control-Allow-Origin',self.headers['Origin']);self.send_header('Access-Control-Allow-Headers','Authorization, Content-Type, X-TTC-Client');self.send_header('Access-Control-Allow-Methods','GET, POST, OPTIONS');self.end_headers()
+            self.send_response(204);self.send_header('Access-Control-Allow-Origin',self.headers['Origin']);self.send_header('Access-Control-Allow-Headers','Authorization, Content-Type, X-RC-Client');self.send_header('Access-Control-Allow-Methods','GET, POST, OPTIONS');self.end_headers()
         def do_GET(self):
             if not self.authorized():return self.response(403,{'error':'unauthorized'})
             if self.path!='/next':return self.response(404,{})
-            if self.headers.get('X-TTC-Client')!='direct-1':return self.response(200,None)
+            if self.headers.get('X-RC-Client')!='direct-1':return self.response(200,None)
             with lock:
                 save(RUNTIME/'heartbeat.json',{'time':time.time()})
                 # Never dispatch another task until the previous result is durable.

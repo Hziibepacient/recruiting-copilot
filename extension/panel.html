@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TTC 猎聘助手</title><link rel="stylesheet" href="panel.css"></head>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>猎聘招聘助手</title><link rel="stylesheet" href="panel.css"></head>
 <body><main>
-<header><p class="eyebrow">TTC / RECRUITING COPILOT</p><h1>猎聘助手 <small>0.3.1</small></h1><p>保持此页打开。由外部 AI 助手阅读证据和审核，扩展执行校验与逐条操作。</p></header>
+<header><p class="eyebrow">RECRUITING COPILOT</p><h1>猎聘助手 <small>0.3.1</small></h1><p>保持此页打开。由外部 AI 助手阅读证据和审核，扩展执行校验与逐条操作。</p></header>
 <section aria-label="连接与控制"><div class="toolbar"><strong id="connection" role="status">正在连接本机服务…</strong><button id="assistantStop" class="danger">停止发送</button></div><p id="connectionHelp">首次使用先运行本机助手；只刷新网页不能启动本机服务。</p><p id="status" role="status">正在读取任务状态</p></section>
 <div class="metrics"><section><span>今日已核验</span><strong id="todayCount">—</strong><small>仅本地已知记录，不等于平台剩余额度</small></section><section><span>待核验发送</span><strong id="unknownCount">—</strong><small>结果不明时停止新增，不重发</small></section><section><span>本批已核验</span><strong id="batchCount">—</strong><small>续接保留当日总量与去重记录</small></section></div>
 <section><h2>当前执行位置</h2><dl><dt>关键词</dt><dd id="keyword">—</dd><dt>下一步</dt><dd id="nextStep">等待助手核对页面</dd><dt>运行状态</dt><dd id="runState">—</dd></dl><p>到达换词节点后先确认新搜索结果，再继续。恢复发送由助手核验账号、未明回执及额度后执行。</p></section>

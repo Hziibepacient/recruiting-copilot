@@ -68,5 +68,5 @@
     assertActive();
     el.click();
   }
-  globalThis.TTCPageControls = Object.freeze({version:1, click, resolveControl});
+  globalThis.RCPageControls = Object.freeze({version:1, click, resolveControl});
 })();

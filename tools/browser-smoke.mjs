@@ -13,7 +13,7 @@ const executablePath=process.env.SMOKE_CHROME||'C:/Program Files/Google/Chrome/A
 const source=await readFile(path.join(root,'extension/snapshot-store.mjs'));
 let outage=false;
 const server=http.createServer((req,res)=>{
- if(req.url==='/next'&&req.method==='OPTIONS'){res.writeHead(204,{'access-control-allow-origin':req.headers.origin||'null','access-control-allow-headers':'Authorization, X-TTC-Client','access-control-allow-methods':'GET, OPTIONS'});res.end();return;}
+ if(req.url==='/next'&&req.method==='OPTIONS'){res.writeHead(204,{'access-control-allow-origin':req.headers.origin||'null','access-control-allow-headers':'Authorization, X-RC-Client','access-control-allow-methods':'GET, OPTIONS'});res.end();return;}
  if(req.url==='/next'){res.writeHead(outage?503:200,{'content-type':'application/json','access-control-allow-origin':req.headers.origin||'null'});res.end('null');return;}
  if(req.url==='/snapshot-store.mjs'){res.writeHead(200,{'content-type':'text/javascript'});res.end(source);return;}
  if(req.url==='/'){res.writeHead(200,{'content-type':'text/html'});res.end('<!doctype html><meta charset="utf-8"><title>isolated snapshot smoke</title>');return;}

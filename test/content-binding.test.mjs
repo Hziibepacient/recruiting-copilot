@@ -17,7 +17,7 @@ test('preview and prepare reject a virtual row reused for another candidate duri
       document: {hasFocus: () => true, visibilityState: 'visible', body: {innerText: 'body'.repeat(50)}, querySelectorAll: selector =>
         selector === 'tr' ? [row] : selector === '[role=dialog]' ? [] : [account]},
       getComputedStyle: () => ({visibility: 'visible', display: 'block'}),
-      TTCPageControls: {click: async (target, before, guard, validate) => {
+      RCPageControls: {click: async (target, before, guard, validate) => {
         await guard(); identity = 'other'; validate(); before(); clicks++;
       }},
       Date, URL, TextEncoder,

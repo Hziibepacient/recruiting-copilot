@@ -10,7 +10,7 @@ async function loop(){
  for(;;){
   try{
    config ||= await requestJSON(chrome.runtime.getURL('bridge-config.json'));
-   const headers={Authorization:'Bearer '+config.token,'X-TTC-Client':'direct-1'};
+   const headers={Authorization:'Bearer '+config.token,'X-RC-Client':'direct-1'};
    // Persist results before posting; retry only the identical result, never the action.
    let pending=(await chrome.storage.local.get('bridgePendingResult')).bridgePendingResult;
    const inflight=(await chrome.storage.local.get('bridgeInflight')).bridgeInflight;
@@ -39,7 +39,7 @@ async function loop(){
 async function start(){
  try{
   connection.textContent='等待唯一控制权；已有助手页面时请使用原页面';
-  await navigator.locks.request('ttc-liepin-controller',loop);
+  await navigator.locks.request('recruiting-liepin-controller',loop);
  }catch(e){connection.textContent='初始化失败：'+e.name+' · '+e.message;}
 }
 start();

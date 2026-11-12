@@ -18,7 +18,7 @@ function harness(mutate) {
     querySelector:selector=>selector==='#rc_select_1'?input:selector==='.ant-spin-spinning'?null:null,
     querySelectorAll:selector=>selector==='[role=dialog]'?dialogs:selector==='p,a,span,div'?[account]:selector==='tr'?rows():selector==='.ant-pagination'?[pager]:[]};
   const context = vm.createContext({chrome:{runtime:{onMessage:{addListener:fn=>listener=fn}}},location:{hostname:'h.liepin.com'},document,
-    getComputedStyle:()=>({visibility:'visible',display:'block'}),TTCPageControls:{click:async(_target,_before,_guard,validate)=>{
+    getComputedStyle:()=>({visibility:'visible',display:'block'}),RCPageControls:{click:async(_target,_before,_guard,validate)=>{
       await _guard(); mutate?.({setPage:v=>page=v,setIds:v=>ids=v,setDialogs:v=>dialogs=v,replaceInput:()=>input={value:'Java 深圳 Agent'},setItemText:v=>item.textContent=v});
       validate(); clicks++; page='2'; ids=['new-a','new-b'];
     }},Date,URL,TextEncoder,setTimeout});

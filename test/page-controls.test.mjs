@@ -31,7 +31,7 @@ function fixture(options = {}) {
     setTimeout: callback => {ticks++; options.tick?.({ticks, button}); callback();},
   });
   vm.runInContext(source, context);
-  return {api: context.TTCPageControls, button, span, scope,
+  return {api: context.RCPageControls, button, span, scope,
     stats: () => ({ticks, clicks, scrolls})};
 }
 

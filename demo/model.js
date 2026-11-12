@@ -116,5 +116,5 @@
     const ordered = samples.slice(offset).concat(samples.slice(0, offset));
     return ordered.slice((s.page - 1) * 6, s.page * 6);
   }
-  root.TTCDemo = Object.freeze({VERSION, JOB, GREETING, KEYWORDS, samples, initial, apply, count, pending, pageItems, sample});
+  root.RecruitingDemo = Object.freeze({VERSION, JOB, GREETING, KEYWORDS, samples, initial, apply, count, pending, pageItems, sample});
 })(globalThis);

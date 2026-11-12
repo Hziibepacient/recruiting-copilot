@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 const context=vm.createContext({Date});
 vm.runInContext(fs.readFileSync(new URL('../demo/model.js',import.meta.url),'utf8'),context);
-const M=context.TTCDemo;
+const M=context.RecruitingDemo;
 const a='demo-person-a',b='demo-person-b';
 function reviewed(id=a,s=M.initial()) {return M.apply(M.apply(s,'read',{id}),'review',{id});}
 function sent(s,id=a) {return M.apply(M.apply(s,'prepare',{id}),'send',{jobId:M.JOB,greeting:M.GREETING});}

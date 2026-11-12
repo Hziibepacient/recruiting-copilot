@@ -8,7 +8,7 @@ class BridgeTests(unittest.TestCase):
   self.server=b.make_server();b.PORT=self.server.server_address[1];self.config=b.init();self.thread=threading.Thread(target=self.server.serve_forever,daemon=True);self.thread.start()
  def tearDown(self):self.server.shutdown();self.server.server_close();self.tmp.cleanup()
  def req(self,path='/next',data=None,origin=None,token=True):
-  headers={'X-TTC-Client':'direct-1'}
+  headers={'X-RC-Client':'direct-1'}
   if token:headers['Authorization']='Bearer '+self.config['token']
   if origin:headers['Origin']=origin
   req=urllib.request.Request(f'http://127.0.0.1:{b.PORT}'+path,data=json.dumps(data).encode() if data else None,headers=headers)

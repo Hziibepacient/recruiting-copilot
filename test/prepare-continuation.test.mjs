@@ -16,7 +16,7 @@ function fixture(){
  querySelectorAll:s=>s==='[role=dialog]'?(shown?[dialog]:[]):s==='tr'?[row]:s==='p,a,span,div'?[account]:[],};
  const ctx=vm.createContext({document,location:{hostname:'h.liepin.com'},getComputedStyle:()=>({visibility:'visible',display:'block',opacity:'1'}),
  chrome:{storage:{local:{set:async()=>{}}},runtime:{onMessage:{addListener:()=>{}}}},
- TTCPageControls:{click:async(el,before,guard,validate)=>{await guard();validate();before();clicks++;}},
+ RCPageControls:{click:async(el,before,guard,validate)=>{await guard();validate();before();clicks++;}},
  Date:class extends Date{static now(){return now;}},URL,TextEncoder});
  vm.runInContext(source,ctx);
  const m={id:'one',config:{account:'DEMO_ACCOUNT',jobId:'10000000'}};

@@ -9,31 +9,31 @@
   },
   {
     "path": "README.md",
-    "sha256": "6cecfa9f6e03819ad345fe3f857cee64ee33b785ddec82bbe70459f8e4ffbc25"
+    "sha256": "72d91190b568841d2f3531f74d61b811ea8518d1b10302debdaa2980f38a723a"
   },
   {
     "path": "bridge.py",
-    "sha256": "cc0d8ae64c8cc9a989b01296f17a9c77b668108698828fa09e793ace63674844"
+    "sha256": "71f9c63c823d9dca589501af16c88fc3e9c936bcffa99f544d17d372c7d8140d"
   },
   {
     "path": "build.py",
-    "sha256": "67d133ae6487996bf363b0d3dd3054b86289437bb0d0a9d7816139e8107e9ed2"
+    "sha256": "09e8219795531d0cbeda45115d51328965a3e40e053be94da973a936e1c20008"
   },
   {
     "path": "demo/README.md",
-    "sha256": "233199a26a7ec5e7e497abfdc7d83d6f46d6cc26cacb344ae27dd38963a80612"
+    "sha256": "1831d960bb0df1084e93f505b5fa64b366cb13fd307a78c92e7575780a46da27"
   },
   {
     "path": "demo/app.js",
-    "sha256": "e72d3fafdeed562666243d3a5f9dd8bd371c135d26e8646dd045f0f64054ee6f"
+    "sha256": "38114e759708670495de7da95f588510319fccb3b374adf4793b674b16a759d3"
   },
   {
     "path": "demo/index.html",
-    "sha256": "23ef68f5d6df0e1c07f7f59e14f9c54e09a4803f45acbf70d11f59660844a6cd"
+    "sha256": "47dc1ca42c0cf9c6b332ba3469f0b1751d75ce82a2dfa574523dc97fdc65b510"
   },
   {
     "path": "demo/model.js",
-    "sha256": "07b915b36764ef8664a542003e20ee9bd241376ba4edf6554d78cc2fef108b04"
+    "sha256": "b9c2c247f6c750040b3f30916ebb29c32443123878e8ae93c488872907d56471"
   },
   {
     "path": "demo/serve.py",
@@ -45,7 +45,7 @@
   },
   {
     "path": "docs/assets/workbench.png",
-    "sha256": "140226f86b9939200c2d2345ef489e7e943d7f9565a2f9c85b822b4949236ef4"
+    "sha256": "c08e53a1b4a580472388727c70416a06b23a6e8c5cd991eecc278125b7980c93"
   },
   {
     "path": "docs/browser-smoke.json",
@@ -61,7 +61,7 @@
   },
   {
     "path": "docs/test-results.json",
-    "sha256": "5c552d0b8fa7368f75a6b55edd8c6ebd75e4672ebf72ab8873391b05dcaf7f24"
+    "sha256": "a8ad3581ee36df989b3c49b2f10b4737e0a31400fe0e9d4005a55c531aca7430"
   },
   {
     "path": "docs/独立审核记录.md",
@@ -69,11 +69,11 @@
   },
   {
     "path": "docs/简历与面试讲解.md",
-    "sha256": "1f7fcd2d700b0cf68414fcf4f0558bf5a2e926090c3bd39167e8d645ade63c51"
+    "sha256": "de75dfd52e1f61aa1b83796d471bdfbe44dc1facddc762a7296e82d73180bf7b"
   },
   {
     "path": "docs/运行与恢复手册.md",
-    "sha256": "86d8a5770785429e6b0a52754224de334c4c1c65ace491dbf1eac9454abbfc8b"
+    "sha256": "a776c04a39d88360459a6d13d18e24804e15eee66302514345947259e764711d"
   },
   {
     "path": "docs/项目架构与难点复盘.md",
@@ -89,11 +89,11 @@
   },
   {
     "path": "extension/bridge-client.js",
-    "sha256": "3d6d393207e58cf88f7db3689522ba8e098cc193440b66310f084dc19afa80e5"
+    "sha256": "0afcdc50eb8eca78fec02f86f6a473c2212db55cd93429f9ed8c131411afb1b6"
   },
   {
     "path": "extension/content.js",
-    "sha256": "8f342b86b6a4df9ea977a75d620727fcd30b81fe01cce85248dede2285d17d48"
+    "sha256": "aae713d62096b424dd4ff929124c264fb5785d4545f4095b2a156ac204e91f60"
   },
   {
     "path": "extension/controller.mjs",
@@ -105,7 +105,7 @@
   },
   {
     "path": "extension/maintenance.html",
-    "sha256": "b777bf8c33cdd9c8ff527c8a9bf9742826f43b7ca32bb02898bfb9835e9736fd"
+    "sha256": "de2615416fc28f0887fa9b334f87983a9502cc4d291b35da0901c1e786464fa7"
   },
   {
     "path": "extension/maintenance.js",
@@ -113,11 +113,11 @@
   },
   {
     "path": "extension/manifest.json",
-    "sha256": "ded0a512de098834e2acc1e21d61ee68e8808924917098326e06ccf190f3f250"
+    "sha256": "11f4784e7e91e7fd00d9132fc6ad6f8e4d317c57a0a6b8b159641800bf2553dd"
   },
   {
     "path": "extension/page-controls.js",
-    "sha256": "6c0bf4f8a3d7b76ad57f01b05a533a8d7a8c96518f4ff73d7f5d836db945817a"
+    "sha256": "3aef19df1b50e0a14fd814eecf2909252d24fbe3070d990ec4194eef487c376c"
   },
   {
     "path": "extension/panel.css",
@@ -125,7 +125,7 @@
   },
   {
     "path": "extension/panel.html",
-    "sha256": "f2aa9c3e49ea0827a3f6ddd85f6f14e964b86fb67262250c7e6ad440252f7135"
+    "sha256": "e45633a7f16832fab75657442e7b0c13a6628618443a55ebaa06fb64dfea8268"
   },
   {
     "path": "extension/panel.js",
@@ -141,7 +141,7 @@
   },
   {
     "path": "extension/snapshot-store.mjs",
-    "sha256": "0583c6d26f6ed2eadd41260dd1188e293bcba96465e6b9d980a97864aaedde75"
+    "sha256": "fa2b827ff5b3838163e78a1e443e5a84576ee40cdc61eb4e3fc408793e568530"
   },
   {
     "path": "extension/transport.mjs",
@@ -161,7 +161,7 @@
   },
   {
     "path": "package.json",
-    "sha256": "91eb02b6a07a656f76230d26c9bd26c2491e5b91675891a145ed87074a2fefd2"
+    "sha256": "5b991126d6355c41a97a9103cddc73be603b502ba750153aa6b76da710aa6530"
   },
   {
     "path": "permits.py",
@@ -173,7 +173,7 @@
   },
   {
     "path": "test/content-binding.test.mjs",
-    "sha256": "ca0c52092ece9103810585307e20fb47571712f301ed452333f001ba33808502"
+    "sha256": "a0f51562830a33e532a53069887f190364670a459edc8bb0366457449992727d"
   },
   {
     "path": "test/controller-recovery.test.mjs",
@@ -189,27 +189,27 @@
   },
   {
     "path": "test/demo-model.test.mjs",
-    "sha256": "c12805645d4359b0e6414877d24e988c6464381fc9b666d3211cced4239dface"
+    "sha256": "87968dfd046ba5a11eff37f7a0adfcd0bb70db52eb2770c5f5f38a46fd7b5f6d"
   },
   {
     "path": "test/fixtures/liepin-page.mjs",
-    "sha256": "bc42922ac86454c5db0d8e41ff98b2b8e107ea8b4bda6b52c78a1ebd3b1a53f8"
+    "sha256": "7bffd6d236896c7cb734596002483882d919a8f4ac470d395d2972518448069a"
   },
   {
     "path": "test/page-controls.test.mjs",
-    "sha256": "b15c5df31818b2f28fe2101751b915685c04020e49dad3ac4b397b11da43ecb9"
+    "sha256": "d91e40cc6bd5a9507a4869d26597aa964f449f9c6f5288dfcfbfe6ea5f16a861"
   },
   {
     "path": "test/page-recovery.test.mjs",
-    "sha256": "3b40c54df526babe66242b54e3dc425a5647ae823c882a36b75a1f0b4024d8d3"
+    "sha256": "d36e7d04753797d944cfa166f92ebcdd37879f699fd58f41eafd17eb2f05def5"
   },
   {
     "path": "test/pagination-binding.test.mjs",
-    "sha256": "f4429456ca4af18d3dc5f89e14a65b588c43aa34ab18bb58a462411f1b48233e"
+    "sha256": "85f1a6e09f585815bb934d9387b11ad5acdd55b3cca3ff1ac2cd2226b69292ef"
   },
   {
     "path": "test/prepare-continuation.test.mjs",
-    "sha256": "93a7f807c5c121588b6675ed0f1fe59f3821870cf5d935a7b5de6e33387c3e70"
+    "sha256": "0965fd2775722dc45d5059e516acf6613e6ab5ee410763a9fc0fbf5bb627424f"
   },
   {
     "path": "test/scope.test.mjs",
@@ -225,7 +225,7 @@
   },
   {
     "path": "test/test_bridge.py",
-    "sha256": "b0b4077c66d16090c9bfee3a93ca52a9df80c06bddefe16ddd3c16f64d200fde"
+    "sha256": "a736166549467454debde897c7d55a56704e5a25af5a992394ad921d6062041d"
   },
   {
     "path": "test/test_build.py",
@@ -241,7 +241,7 @@
   },
   {
     "path": "test/test_operator_reliability.py",
-    "sha256": "9833a843fbf171b4de2c92060d2478c106923a9400aae7805c9d400e8d5a35d7"
+    "sha256": "c58a09a7f77c0db1c7dbaf8acebabffe57cc5f233530076be8a58d8a199fcea7"
   },
   {
     "path": "test/test_outreach_operator.py",
@@ -253,7 +253,7 @@
   },
   {
     "path": "tools/browser-smoke.mjs",
-    "sha256": "bffcb64a8ceb91d63e8010b22f05a7aad546db80fdb25364491dd687a7432a65"
+    "sha256": "e95e8a83bdb4097e14931a483c7322f9f2b0e96e0c795cd16f3e044abb8d55fa"
   },
   {
     "path": "tools/import-legacy-ledger.py",
@@ -281,6 +281,6 @@
   },
   {
     "path": "使用说明.md",
-    "sha256": "63378ddc7474090d7f8f77d1012fcadd6be23b9f8593e3ba9a900c5171b2f1c1"
+    "sha256": "1c7cc901713be8691febb1a89cae9a00b719e2d23f40af1e121dfea057f74534"
   }
 ]

@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  const M = TTCDemo, STORAGE = 'ttc-offline-demo-v1';
+  const M = RecruitingDemo, STORAGE = 'recruiting-offline-demo-v1';
   const $ = id => document.getElementById(id);
   let state;
   try {

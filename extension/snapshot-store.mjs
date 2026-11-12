@@ -1,6 +1,6 @@
 // Complete candidate snapshots live outside chrome.storage.local's small quota.
 // The caller must serialize legacy migration with all snapshot writers.
-const DATABASE='ttc-liepin-snapshots';
+const DATABASE='recruiting-liepin-snapshots';
 const STORE='snapshots';
 
 function reason(error){return error?.message||error?.name||String(error||'unknown error');}
