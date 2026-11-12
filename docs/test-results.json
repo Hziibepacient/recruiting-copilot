@@ -1,0 +1,20 @@
+{
+  "generatedAt": "2026-11-12T09:11:47.245031+00:00",
+  "release": "0.3.1",
+  "node": "v24.14.0",
+  "python": "3.12.4",
+  "groups": {
+    "node": {
+      "exitCode": 0,
+      "seconds": 0.801,
+      "total": 113
+    },
+    "python": {
+      "exitCode": 0,
+      "seconds": 14.386,
+      "total": 48
+    }
+  },
+  "allPassed": true,
+  "scope": "Synthetic fixtures and isolated localhost services. No real candidates or messages."
+}

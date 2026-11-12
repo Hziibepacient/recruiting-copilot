@@ -1,0 +1,286 @@
+[
+  {
+    "path": ".gitignore",
+    "sha256": "d76be1c84786c74fffa9cbec7da6908779bcbb8c6350a5fdc12e57a8c5a6ab5e"
+  },
+  {
+    "path": "PUBLIC-BUILD.md",
+    "sha256": "533de164aba94deeada317b996abb4ea5f451c125bdf842eb3d5b0fae4ad2c6d"
+  },
+  {
+    "path": "README.md",
+    "sha256": "6cecfa9f6e03819ad345fe3f857cee64ee33b785ddec82bbe70459f8e4ffbc25"
+  },
+  {
+    "path": "bridge.py",
+    "sha256": "cc0d8ae64c8cc9a989b01296f17a9c77b668108698828fa09e793ace63674844"
+  },
+  {
+    "path": "build.py",
+    "sha256": "67d133ae6487996bf363b0d3dd3054b86289437bb0d0a9d7816139e8107e9ed2"
+  },
+  {
+    "path": "demo/README.md",
+    "sha256": "233199a26a7ec5e7e497abfdc7d83d6f46d6cc26cacb344ae27dd38963a80612"
+  },
+  {
+    "path": "demo/app.js",
+    "sha256": "e72d3fafdeed562666243d3a5f9dd8bd371c135d26e8646dd045f0f64054ee6f"
+  },
+  {
+    "path": "demo/index.html",
+    "sha256": "23ef68f5d6df0e1c07f7f59e14f9c54e09a4803f45acbf70d11f59660844a6cd"
+  },
+  {
+    "path": "demo/model.js",
+    "sha256": "07b915b36764ef8664a542003e20ee9bd241376ba4edf6554d78cc2fef108b04"
+  },
+  {
+    "path": "demo/serve.py",
+    "sha256": "fffc37cb22846630fe01c7bde1898fe85266b25e7ea98b77310097c5db11ea6c"
+  },
+  {
+    "path": "demo/style.css",
+    "sha256": "e8d1f7a9cb1a906629ec583c76ca27920d2cd6608de3adc6dd0c4afd4f5e57c1"
+  },
+  {
+    "path": "docs/assets/workbench.png",
+    "sha256": "140226f86b9939200c2d2345ef489e7e943d7f9565a2f9c85b822b4949236ef4"
+  },
+  {
+    "path": "docs/browser-smoke.json",
+    "sha256": "7c2b8db19c5ee9d0a8b33014a8a78e5c2cac6b512cbbd617db40247978aefdc1"
+  },
+  {
+    "path": "docs/overnight-acceptance-2026-11-02.md",
+    "sha256": "0958958622cb96a09902625587c4878a11b3cd0d7e6d7a69cc2f33415bbe10fd"
+  },
+  {
+    "path": "docs/public-package-test.json",
+    "sha256": "78bf3c6808043240e006ff460e29152a26cbed07d32efdd2807cdd1a70b192cf"
+  },
+  {
+    "path": "docs/test-results.json",
+    "sha256": "5c552d0b8fa7368f75a6b55edd8c6ebd75e4672ebf72ab8873391b05dcaf7f24"
+  },
+  {
+    "path": "docs/独立审核记录.md",
+    "sha256": "353ec236c6db40d46ea8c0bf990ce2155530d1cc81a5325620bfea9222825de0"
+  },
+  {
+    "path": "docs/简历与面试讲解.md",
+    "sha256": "1f7fcd2d700b0cf68414fcf4f0558bf5a2e926090c3bd39167e8d645ade63c51"
+  },
+  {
+    "path": "docs/运行与恢复手册.md",
+    "sha256": "86d8a5770785429e6b0a52754224de334c4c1c65ace491dbf1eac9454abbfc8b"
+  },
+  {
+    "path": "docs/项目架构与难点复盘.md",
+    "sha256": "0ecbdff5e25c22cae5d5a5af18922dfe71a8d92521c1a49a1de9fca1e8f8e819"
+  },
+  {
+    "path": "docs/验收报告.md",
+    "sha256": "a1246687d73d32951bb49941a8ce4f79c3f62d2cf1ff03184f93815181d8eefa"
+  },
+  {
+    "path": "extension/acceptance.mjs",
+    "sha256": "593d37452933f576221fbd1c1b748386da8f6619461a0f0313752ee30efbff48"
+  },
+  {
+    "path": "extension/bridge-client.js",
+    "sha256": "3d6d393207e58cf88f7db3689522ba8e098cc193440b66310f084dc19afa80e5"
+  },
+  {
+    "path": "extension/content.js",
+    "sha256": "8f342b86b6a4df9ea977a75d620727fcd30b81fe01cce85248dede2285d17d48"
+  },
+  {
+    "path": "extension/controller.mjs",
+    "sha256": "dd9a9353a8d9bf88a0ee55e760fb4e68bc2f4fbf8b437bf067aeffda1b5929b9"
+  },
+  {
+    "path": "extension/core.mjs",
+    "sha256": "28c168b44c5670463da12b3cd2cd70873647e284d7297abcd6d3cb2c8f1cf4fc"
+  },
+  {
+    "path": "extension/maintenance.html",
+    "sha256": "b777bf8c33cdd9c8ff527c8a9bf9742826f43b7ca32bb02898bfb9835e9736fd"
+  },
+  {
+    "path": "extension/maintenance.js",
+    "sha256": "13f00764481a196bfd29e4f235ae7ffd8ea7f63a18a231db9c92f11d17ed4bf0"
+  },
+  {
+    "path": "extension/manifest.json",
+    "sha256": "ded0a512de098834e2acc1e21d61ee68e8808924917098326e06ccf190f3f250"
+  },
+  {
+    "path": "extension/page-controls.js",
+    "sha256": "6c0bf4f8a3d7b76ad57f01b05a533a8d7a8c96518f4ff73d7f5d836db945817a"
+  },
+  {
+    "path": "extension/panel.css",
+    "sha256": "0579b873c1879d86b528175ade5254c38d1f8191adb4d924a330a542dfbd5f11"
+  },
+  {
+    "path": "extension/panel.html",
+    "sha256": "f2aa9c3e49ea0827a3f6ddd85f6f14e964b86fb67262250c7e6ad440252f7135"
+  },
+  {
+    "path": "extension/panel.js",
+    "sha256": "61149e57336a1a1f985b07a9e53f0d44adce7f46475b60acadbee54961e8587c"
+  },
+  {
+    "path": "extension/protocol.mjs",
+    "sha256": "bb90e0e109081d892e109268852b06657614f62397b1c4000879febf61f6d0a5"
+  },
+  {
+    "path": "extension/scope.mjs",
+    "sha256": "90e5d6e46c0808f617543ca179b4f59bde05d3edbdefe57d0bcf283ab91f5bdf"
+  },
+  {
+    "path": "extension/snapshot-store.mjs",
+    "sha256": "0583c6d26f6ed2eadd41260dd1188e293bcba96465e6b9d980a97864aaedde75"
+  },
+  {
+    "path": "extension/transport.mjs",
+    "sha256": "695eee41df4b827a2bfbeff36639ea483e4c6421c8842255147064c509194171"
+  },
+  {
+    "path": "extension/worker.js",
+    "sha256": "35ef7e1880d6e7c00884adac66deb0accf66e144ddb01e51bb3c7f80b50700ba"
+  },
+  {
+    "path": "ledger.py",
+    "sha256": "ecddfbe0389435df683f1e057f0815fce565de5bd9f6bfe27f5db99a77dd1593"
+  },
+  {
+    "path": "outreach_operator.py",
+    "sha256": "fa739768ee137aa18902c9385ea9106dbeacf7106223a47468e5fc9ef0921984"
+  },
+  {
+    "path": "package.json",
+    "sha256": "91eb02b6a07a656f76230d26c9bd26c2491e5b91675891a145ed87074a2fefd2"
+  },
+  {
+    "path": "permits.py",
+    "sha256": "093e7bae725edeb317503b3a7a8d8538034dad585e269da9c9b0e0ebd40af8d9"
+  },
+  {
+    "path": "test/acceptance.test.mjs",
+    "sha256": "12f1bc901a7fa328dc92144e44f0957c4a601e9626ba210cce274a3f91df7e8a"
+  },
+  {
+    "path": "test/content-binding.test.mjs",
+    "sha256": "ca0c52092ece9103810585307e20fb47571712f301ed452333f001ba33808502"
+  },
+  {
+    "path": "test/controller-recovery.test.mjs",
+    "sha256": "a08128b9ac14543dbde4045f58ce1d19debd81c1f9a17ae506b12a0820ca9132"
+  },
+  {
+    "path": "test/controller.test.mjs",
+    "sha256": "f0e89ff4ed5bc4a4775f18e8cfd90ead118cc62d093a1ee4ff7813d0e198faf4"
+  },
+  {
+    "path": "test/core.test.mjs",
+    "sha256": "783ed67787aefc4c1cad5d688ac5084a1b0e001e0a5a5d9df7057b51a618353e"
+  },
+  {
+    "path": "test/demo-model.test.mjs",
+    "sha256": "c12805645d4359b0e6414877d24e988c6464381fc9b666d3211cced4239dface"
+  },
+  {
+    "path": "test/fixtures/liepin-page.mjs",
+    "sha256": "bc42922ac86454c5db0d8e41ff98b2b8e107ea8b4bda6b52c78a1ebd3b1a53f8"
+  },
+  {
+    "path": "test/page-controls.test.mjs",
+    "sha256": "b15c5df31818b2f28fe2101751b915685c04020e49dad3ac4b397b11da43ecb9"
+  },
+  {
+    "path": "test/page-recovery.test.mjs",
+    "sha256": "3b40c54df526babe66242b54e3dc425a5647ae823c882a36b75a1f0b4024d8d3"
+  },
+  {
+    "path": "test/pagination-binding.test.mjs",
+    "sha256": "f4429456ca4af18d3dc5f89e14a65b588c43aa34ab18bb58a462411f1b48233e"
+  },
+  {
+    "path": "test/prepare-continuation.test.mjs",
+    "sha256": "93a7f807c5c121588b6675ed0f1fe59f3821870cf5d935a7b5de6e33387c3e70"
+  },
+  {
+    "path": "test/scope.test.mjs",
+    "sha256": "7f0a004da434afdf69ca4a7898bb62b66347089f78197f6c2b384b9b44acaf1e"
+  },
+  {
+    "path": "test/snapshot-store.test.mjs",
+    "sha256": "fdc6fdc1256ab98097b617a843b0915daefed12d1fc3ec4246f204cbcb8597d4"
+  },
+  {
+    "path": "test/test_acceptance_bridge.py",
+    "sha256": "0072cb9fdbb0d690e41078ad8dc3cd00828c588d4db0ecb26dd9e3b65a977538"
+  },
+  {
+    "path": "test/test_bridge.py",
+    "sha256": "b0b4077c66d16090c9bfee3a93ca52a9df80c06bddefe16ddd3c16f64d200fde"
+  },
+  {
+    "path": "test/test_build.py",
+    "sha256": "696928d877de5e97167a76bc738403d751b5db82f472e2036073c97ec251a046"
+  },
+  {
+    "path": "test/test_ledger_dates.py",
+    "sha256": "53a6fd2e5713389125e426dbcdeba736737e9b32c9b2b2eb243e3077752100dc"
+  },
+  {
+    "path": "test/test_legacy_import.py",
+    "sha256": "5addbcf8e8c39e44198b5e6f2f8b34c59d773ecfb104370afc1d061fbe6f9a10"
+  },
+  {
+    "path": "test/test_operator_reliability.py",
+    "sha256": "9833a843fbf171b4de2c92060d2478c106923a9400aae7805c9d400e8d5a35d7"
+  },
+  {
+    "path": "test/test_outreach_operator.py",
+    "sha256": "ad3de9da665918bbc402781243d9a66439ed2c17d7e3f24142b276629df9fb71"
+  },
+  {
+    "path": "test/transport.test.mjs",
+    "sha256": "94f537a15539e41ab58f0787b2e1628996a6f17853abedc6ac7e1b8dfc9fdd88"
+  },
+  {
+    "path": "tools/browser-smoke.mjs",
+    "sha256": "bffcb64a8ceb91d63e8010b22f05a7aad546db80fdb25364491dd687a7432a65"
+  },
+  {
+    "path": "tools/import-legacy-ledger.py",
+    "sha256": "9ccf8fc75a7fbf9139c7118d0aea2ab4a91204dd56caa7752e43636482a4fea0"
+  },
+  {
+    "path": "tools/privacy-check.py",
+    "sha256": "8ddcca4df5ac34c8ec7f6bc6a73c85d682874160e05a6265020c40c5204d6449"
+  },
+  {
+    "path": "tools/start-bridge.ps1",
+    "sha256": "11d74f66d8e0687c97436f47c71a394cc2ac62d88d53c5a01da9aa7d345d2fe0"
+  },
+  {
+    "path": "tools/synthetic-flow.mjs",
+    "sha256": "d2a25f3ed9693db5de17d11b7ecbb9fb355af8abe0610fbb241c9c3b14c298b3"
+  },
+  {
+    "path": "tools/update-extension.ps1",
+    "sha256": "6ae84a2a6133aaee650ea40c0e95632a5ddf03009042ca0bd879ec97ac17c3b0"
+  },
+  {
+    "path": "tools/verify.py",
+    "sha256": "8f3513f8dc9eb69b94a0c3f73e938f33d784a682a133cf7c0192f85871b3b070"
+  },
+  {
+    "path": "使用说明.md",
+    "sha256": "63378ddc7474090d7f8f77d1012fcadd6be23b9f8593e3ba9a900c5171b2f1c1"
+  }
+]

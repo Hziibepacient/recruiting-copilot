@@ -1,0 +1,12 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+const db={};
+const windowUpdates=[];
+globalThis.chrome={storage:{local:{get:async keys=>Object.fromEntries((Array.isArray(keys)?keys:[keys]).filter(k=>k in db).map(k=>[k,db[k]])),set:async v=>Object.assign(db,v)}},tabs:{query:async q=>{assert.equal(q.url,'https://h.liepin.com/*');return [{id:1,title:'猎聘',url:'https://h.liepin.com/search'}];},get:async id=>({id,url:'https://h.liepin.com/search',windowId:7})},windows:{update:async(id,opts)=>{windowUpdates.push({id,opts});return {id,...opts};}}};
+const {handle}=await import('../extension/controller.mjs');
+test('界面直接读取配置，不依赖后台消息返回',async()=>assert.equal((await handle({type:'state'})).config.jobId,'10000000'));
+test('状态回传不重复保存简历快照，原快照保留',async()=>{db.snapshots={candidate:{text:'简历证据'}};db.events=[{status:'verified'}];const result=await handle({type:'state'});assert.equal('snapshots' in result,false);assert.deepEqual(result.events,db.events);assert.equal(db.snapshots.candidate.text,'简历证据');});
+test('直接列出猎聘页面',async()=>assert.equal((await handle({type:'tabs'}))[0].id,1));
+test('停止状态持久保存',async()=>{await handle({type:'stop'});assert.equal(db.stop,true);});
+test('后台恢复窗口保持未聚焦并限定猎聘标签',async()=>{const r=await handle({type:'activate',tabId:1,background:true});assert.equal(r.restored,true);assert.equal(r.focused,false);assert.deepEqual(windowUpdates.at(-1),{id:7,opts:{state:'normal',width:1280,height:900,focused:false}});});
+test('审核期间所有发送锁定',async()=>{await assert.rejects(handle({type:'run'}),/锁定/);await assert.rejects(handle({type:'run',confirmed:true}),/锁定/);});

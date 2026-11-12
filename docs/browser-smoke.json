@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "browser": "msedge.exe",
+  "scope": "isolated headless Chromium, temporary browser context, loopback fixture only",
+  "checks": [
+    "transaction-complete",
+    "legacy-migration",
+    "retain-events-queue",
+    "newest-snapshot",
+    "fresh-replaces-undated",
+    "invalid-capture-rejected",
+    "abort-preserves-legacy",
+    "atomic-rollback",
+    "reload-persistence",
+    "no-page-errors"
+  ],
+  "extension": {
+    "ok": true,
+    "version": "0.3.0",
+    "checks": [
+      "isolated-extension-loaded",
+      "local-fixture-connection",
+      "disconnect-message",
+      "automatic-reconnect",
+      "stop-persists-after-reload",
+      "no-page-errors"
+    ]
+  },
+  "checkedAt": "2026-10-29T10:11:43.205Z"
+}

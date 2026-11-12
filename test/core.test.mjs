@@ -1,0 +1,36 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {DEFAULTS,day,validateConfig,validateDecision,checkBudget,alreadySent,checkNextBatch,needsKeywordSwitch} from '../extension/core.mjs';
+const quote='候选人简历的真实原文';
+const snapshot={id:{complete:true,digest:'abc',text:quote}};
+const decision=()=>({candidateId:'id',digest:'abc',direction:'通用',account:DEFAULTS.account,jobId:DEFAULTS.jobId,approved:true,gates:Object.fromEntries(['education','backend','expected_city','agent','delivery'].map(k=>[k,{state:'pass',quote}]))});
+test('上海日期跨UTC午夜',()=>assert.equal(day(new Date('2026-10-22T17:00:00Z')),'2026-10-23'));
+test('接受完整审核记录',()=>assert.equal(validateDecision(decision(),snapshot,DEFAULTS).direction,'通用'));
+test('AI辅助研发是可选评分项，不阻断外联硬门槛',()=>{const d=decision();d.gates.ai_dev={state:'unknown',quote:''};assert.doesNotThrow(()=>validateDecision(d,snapshot,DEFAULTS));});
+test('CRM必须有Java证据',()=>{const d=decision();d.direction='CRM';assert.throws(()=>validateDecision(d,snapshot,DEFAULTS),/java/);d.gates.java={state:'pass',quote};assert.doesNotThrow(()=>validateDecision(d,snapshot,DEFAULTS));});
+test('拒绝unknown及编造引文',()=>{const d=decision();d.gates.education.state='unknown';assert.throws(()=>validateDecision(d,snapshot,DEFAULTS));d.gates.education={state:'pass',quote:'不在原文中的学历描述'};assert.throws(()=>validateDecision(d,snapshot,DEFAULTS));});
+test('拒绝换简历版本或账号职位',()=>{for(const [k,v]of [['digest','changed'],['account','other'],['jobId','1'],['approved',false]]){const d=decision();d[k]=v;assert.throws(()=>validateDecision(d,snapshot,DEFAULTS));}});
+test('未读完整禁止进入队列',()=>assert.throws(()=>validateDecision(decision(),{id:{...snapshot.id,complete:false}},DEFAULTS)));
+test('待确认发送阻止重试',()=>{for(const status of ['pending','uncertain'])assert.throws(()=>checkBudget([{account:DEFAULTS.account,candidateId:'a',status}],DEFAULTS));});
+test('历史重复记录只计一次且按账号去重',()=>{const e={account:DEFAULTS.account,candidateId:'a',status:'verified',day:'2026-10-23'};assert.equal(checkBudget([e,e],DEFAULTS,'2026-10-23'),1);assert.equal(alreadySent([e],'other','a'),false);assert.equal(alreadySent([e],e.account,'a'),true);});
+test('额度已到拒绝继续',()=>assert.throws(()=>checkBudget([{account:DEFAULTS.account,candidateId:'a',status:'verified',day:'2026-10-23'}],{...DEFAULTS,dailyLimit:1},'2026-10-23')));
+test('限制最大批次及日额度',()=>{assert.doesNotThrow(()=>validateConfig(DEFAULTS));for(const override of [{batchLimit:21},{dailyLimit:61},{switchAfter:9},{keywords:[]}])assert.throws(()=>validateConfig({...DEFAULTS,...override}));});
+test('续接必须完成一批、换词并保留额度及未明回执检查',()=>{
+ const account=DEFAULTS.account, batchId='batch', events=Array.from({length:20},(_,i)=>({account,batchId,candidateId:String(i),status:'verified',origin:'extension',day:'2020-01-01'}));
+ const s={config:DEFAULTS,historyAccount:account,events,run:{batchId,lastKeyword:'新关键词',switchCheckpoint:20,needsKeywordChange:false}};
+ assert.doesNotThrow(()=>checkNextBatch(s,'新关键词'));
+ assert.throws(()=>checkNextBatch({...s,events:events.slice(0,19)},'新关键词'),/尚未完成/);
+ assert.throws(()=>checkNextBatch({...s,run:{...s.run,needsKeywordChange:true}},'新关键词'),/先更换关键词/);
+ assert.throws(()=>checkNextBatch(s,'旧关键词'),/搜索词/);
+ assert.throws(()=>checkNextBatch({...s,events:[...events,{account,candidateId:'pending',status:'uncertain'}]},'新关键词'),/结果不明/);
+ const todays=Array.from({length:60},(_,i)=>({account,candidateId:'today'+i,status:'verified',day:day()}));
+ assert.throws(()=>checkNextBatch({...s,events:[...events,...todays]},'新关键词'),/额度上限/);
+});
+test('成功事件先落盘或核回执后，换词要求仍从事件计数恢复',()=>{
+ const account=DEFAULTS.account,batchId='batch',events=Array.from({length:20},(_,i)=>({account,batchId,candidateId:String(i),status:'verified',origin:'extension'}));
+ const run={batchId,lastKeyword:'旧关键词',switchCheckpoint:0,needsKeywordChange:false};
+ assert.equal(needsKeywordSwitch({config:DEFAULTS,events:events.slice(0,9),run}),false);
+ assert.equal(needsKeywordSwitch({config:DEFAULTS,events:events.slice(0,10),run}),true);
+ assert.equal(needsKeywordSwitch({config:DEFAULTS,events,run:{...run,switchCheckpoint:10}}),true);
+ assert.equal(needsKeywordSwitch({config:DEFAULTS,events,run:{...run,switchCheckpoint:20}}),false);
+});

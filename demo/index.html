@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>TTC 猎聘助手 · 离线演示</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="safety">演示数据，不连接猎聘，不会真实发送。审核结论来自预置样本，未接入 AI 服务。</div>
+  <header>
+    <div><h1>TTC 猎聘助手</h1><p>从简历证据到可核验的联系记录</p></div>
+    <div class="header-actions"><span id="connection" class="status"></span><button id="connectionButton" class="quiet"></button><button id="stopButton" class="quiet"></button></div>
+  </header>
+  <main>
+    <section class="workbench" aria-labelledby="workflow-title">
+      <div class="intro"><div><h2 id="workflow-title">一个可解释的操作闭环</h2><p>查看详情 → 核对证据 → 绑定职位和文案 → 模拟发送 → 核验回执。</p></div><span class="count"><strong id="verified">0</strong> / 60 条演示已确认</span></div>
+      <div class="tools">
+        <label>搜索词<select id="keyword"></select></label><button id="search">提交演示搜索</button>
+        <label class="scenario">故障场景<select id="mode"><option value="normal">正常</option><option value="lost">模拟回执丢失</option><option value="captcha">模拟安全验证</option></select></label>
+        <button id="reconcile" class="quiet">核验未明回执</button>
+      </div>
+      <div id="notice" class="notice" role="status" aria-live="polite">从左侧打开一位演示候选人，逐步完成流程。</div>
+      <div class="workspace">
+        <section class="results" aria-label="演示搜索结果"><div class="list-heading"><h3 id="listTitle"></h3><span id="pageText"></span></div><div id="candidates"></div><div class="pagination"><button id="previous" class="quiet">上一页</button><button id="next" class="quiet">下一页</button></div></section>
+        <section class="detail" aria-labelledby="detailTitle"><div id="detailEmpty"><h3 id="detailTitle">先看证据，再决定是否联系</h3><p>这里会展示教育背景、工作履历、Agent 项目和工程交付证据。缺少证据会明确保留“待核实”。</p><p class="hint">建议先看候选人 A，再看 C 和 F：分别体验通过、证据不足和门槛不符。</p></div><div id="detailContent" hidden></div></section>
+      </div>
+    </section>
+    <section class="records"><div class="records-title"><div><h2>每一步都有记录</h2><p>本页只保留虚构演示状态；刷新后可续接。</p></div><div><button id="nearTen" class="quiet">载入第 10 条边界场景</button><button id="reset" class="quiet">重置演示</button></div></div><ol id="events"></ol></section>
+    <p class="boundary">这是交互说明夹具，不是生产扩展，也不是线上成功率证明。真实页面适配、权限和平台验证仍需要独立验收。</p>
+  </main>
+  <dialog id="modal" aria-labelledby="modalTitle"><div class="modal-heading"><h2 id="modalTitle"></h2><button id="closeModal" class="close" aria-label="关闭演示窗口">×</button></div><div id="modalContent"></div></dialog>
+  <script src="model.js"></script><script src="app.js"></script>
+</body></html>

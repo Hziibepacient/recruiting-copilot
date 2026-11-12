@@ -1,0 +1,22 @@
+# Private production state and credentials
+.runtime/
+extension/bridge-config.json
+history-verified.json
+__pycache__/
+*.pyc
+backup*/
+release/
+开发与独立审核记录.md
+test-tmp/
+node_modules/
+
+# Local authorization, evidence, logs and historical platform notes
+extension/outreach-scope.json
+*.log
+*.jsonl
+*.har
+*.mp4
+*.webm
+.env
+.env.*
+docs/*2026-10-30*.md

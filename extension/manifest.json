@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "TTC 猎聘助手",
+  "version": "0.3.1",
+  "description": "本地读取猎聘页面、审核队列、核验默认招呼回执。",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://h.liepin.com/*",
+    "http://127.0.0.1:18763/*"
+  ],
+  "background": {
+    "service_worker": "worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "打开 TTC 猎聘助手"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://h.liepin.com/*"
+      ],
+      "js": [
+        "page-controls.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'"
+  }
+}
